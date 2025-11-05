@@ -1,11 +1,18 @@
 .portfolio-card {
-  background: #fff;
+  background: #ffffff;
+  color: #1f2937;
   padding: 24px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   max-width: 900px;
   margin: 20px auto;
   font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.portfolio-card.dark-mode {
+  background: #1f2937;
+  color: #f9fafb;
 }
 
 .header {
@@ -13,22 +20,48 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
-.header h1 {
-  margin: 0;
-  color: #1d4ed8;
+.intro {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #2563eb;
+  object-fit: cover;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.actions button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.actions button:hover {
+  background: #1e40af;
 }
 
 .subtext {
   color: #6b7280;
-  font-size: 14px;
 }
 
-.links a {
-  color: #2563eb;
-  text-decoration: none;
-  margin-left: 8px;
+.dark-mode .subtext {
+  color: #9ca3af;
 }
 
 .section {
@@ -49,6 +82,10 @@
   border-radius: 6px;
 }
 
+.dark-mode .skills li {
+  background: #374151;
+}
+
 .projects {
   display: grid;
   gap: 10px;
@@ -59,6 +96,11 @@
   padding: 12px;
   border-left: 4px solid #2563eb;
   border-radius: 6px;
+}
+
+.dark-mode .project {
+  background: #374151;
+  border-left-color: #60a5fa;
 }
 
 .footer {

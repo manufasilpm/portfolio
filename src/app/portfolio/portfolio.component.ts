@@ -1,17 +1,26 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-portfolio',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css']
+  styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  name = 'Manu PM';
+  name = 'Manu P M';
   role = 'Java Full Stack Developer';
   experience = 4;
-  email = 'manu@example.com';
-  github = 'https://github.com/<your-username>';
-  linkedin = 'https://linkedin.com/in/<your-username>';
+  email = 'manufasilpm@gmail.com';
+  github = 'https://github.com/manufasilpm';
+  linkedin = 'https://linkedin.com/in/manufasil';
+  resumeUrl = 'assets/Manu_PM_Resume.pdf';  // <-- Place your resume here
+  isDarkMode = false;
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+  }
 
   skills = [
     'Java 11+', 'Spring Boot', 'Microservices', 'REST APIs',
@@ -21,12 +30,12 @@ export class PortfolioComponent {
   projects = [
     {
       name: 'E-Commerce Management System',
-      desc: 'A full-stack application for managing products, sales, and users using Spring Boot & Angular.',
-      tech: 'Spring Boot, Angular, MySQL, JWT, REST'
+      desc: 'A full-stack application using Spring Boot and Angular with JWT authentication.',
+      tech: 'Spring Boot, Angular, MySQL'
     },
     {
       name: 'Real-time Notification Service',
-      desc: 'Implemented Kafka-based event notifications for product updates and order tracking.',
+      desc: 'Implemented Kafka-based event-driven system for real-time updates.',
       tech: 'Spring Boot, Kafka, WebSocket, Redis'
     }
   ];

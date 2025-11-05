@@ -1,13 +1,20 @@
-<div class="portfolio-card">
+<div class="portfolio-card" [class.dark-mode]="isDarkMode">
   <header class="header">
-    <div>
-      <h1>{{ name }}</h1>
-      <p class="subtext">{{ role }} • {{ experience }} years</p>
+    <div class="intro">
+      <img src="assets/profile.jpg" alt="Profile" class="profile-pic" />
+      <div>
+        <h1>{{ name }}</h1>
+        <p class="subtext">{{ role }} • {{ experience }} years</p>
+      </div>
     </div>
-    <div class="links">
-      <a href="mailto:{{ email }}">Email</a> |
-      <a href="{{ github }}" target="_blank">GitHub</a> |
-      <a href="{{ linkedin }}" target="_blank">LinkedIn</a>
+
+    <div class="actions">
+      <button (click)="toggleDarkMode()">
+        {{ isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode' }}
+      </button>
+      <a [href]="resumeUrl" download>
+        <button>📄 Download Resume</button>
+      </a>
     </div>
   </header>
 
