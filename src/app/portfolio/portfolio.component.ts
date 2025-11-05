@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./portfolio.component.scss']
 })
 export class PortfolioComponent {
-  name = 'Manu P M';
+  name = 'Manu  Fasil P M';
   role = 'Java Full Stack Developer';
   experience = 4;
   email = 'manufasilpm@gmail.com';
