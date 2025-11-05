@@ -8,7 +8,7 @@
     "build": "ng build",
     "build:gh": "ng build --configuration production --base-href=/portfolio-manu/",
     "predeploy": "npm run build:gh",
-    "deploy": "npx angular-cli-ghpages --dir=dist/portfolio-manu",
+    "deploy": "npx angular-cli-ghpages --dir=dist/portfolio-manu/browser",
     "deploy:ng": "ng deploy --base-href=/portfolio-manu/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
