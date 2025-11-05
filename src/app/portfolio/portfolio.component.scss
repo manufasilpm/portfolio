@@ -1,0 +1,68 @@
+.portfolio-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header h1 {
+  margin: 0;
+  color: #1d4ed8;
+}
+
+.subtext {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.links a {
+  color: #2563eb;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.skills {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills li {
+  background: #eff6ff;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.projects {
+  display: grid;
+  gap: 10px;
+}
+
+.project {
+  background: #f9fafb;
+  padding: 12px;
+  border-left: 4px solid #2563eb;
+  border-radius: 6px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 16px;
+  color: #9ca3af;
+}

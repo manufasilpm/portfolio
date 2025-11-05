@@ -1,0 +1,35 @@
+<div class="portfolio-card">
+  <header class="header">
+    <div>
+      <h1>{{ name }}</h1>
+      <p class="subtext">{{ role }} • {{ experience }} years</p>
+    </div>
+    <div class="links">
+      <a href="mailto:{{ email }}">Email</a> |
+      <a href="{{ github }}" target="_blank">GitHub</a> |
+      <a href="{{ linkedin }}" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li *ngFor="let skill of skills">{{ skill }}</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project" *ngFor="let p of projects">
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.desc }}</p>
+        <small>Tech Stack: {{ p.tech }}</small>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <small>© {{ name }} — Java Full Stack Developer Portfolio</small>
+  </footer>
+</div>

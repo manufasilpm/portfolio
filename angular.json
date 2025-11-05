@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/portfolio-manu",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "main": "src/main.ts",            
             "polyfills": [
               "zone.js"
             ],
@@ -28,8 +28,11 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public",
+                "output": "/"
+              },
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
@@ -50,7 +53,11 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/portfolio-manu/",       
+              "optimization": true,
+              "sourceMap": false,
+              "extractLicenses": true
             },
             "development": {
               "optimization": false,
@@ -87,16 +94,30 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "public",
+                "output": "/"
+              },
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss"
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/portfolio-manu/",     
+            "name": "Manu PM Portfolio",         
+            "message": "Deploy portfolio to GitHub Pages"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

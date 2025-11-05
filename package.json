@@ -1,14 +1,18 @@
 {
   "name": "portfolio-manu",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh": "ng build --configuration production --base-href=/portfolio-manu/",
+    "predeploy": "npm run build:gh",
+    "deploy": "npx angular-cli-ghpages --dir=dist/portfolio-manu",
+    "deploy:ng": "ng deploy --base-href=/portfolio-manu/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.0",
     "@angular/common": "^19.1.0",
@@ -27,6 +31,7 @@
     "@angular/cli": "^19.1.5",
     "@angular/compiler-cli": "^19.1.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
