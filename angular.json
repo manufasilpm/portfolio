@@ -33,7 +33,8 @@
               "src/assets"
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "subresourceIntegrity": true
           },
           "configurations": {
             "production": {
@@ -50,7 +51,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/portfolio-manu/",
+              "baseHref": "/portfolio/",
               "optimization": true,
               "sourceMap": false,
               "extractLicenses": true
@@ -100,10 +101,10 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/portfolio-manu/",
+            "baseHref": "/portfolio/",
             "name": "Manu PM Portfolio",
             "message": "Deploy portfolio to GitHub Pages",
-            "dir": "dist/portfolio-manu"  
+            "dir": "dist/portfolio-manu/browser"
           }
         }
       }

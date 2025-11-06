@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-image: url("assets/texture-image.jpg"); /* 👈 your texture */
+  background-repeat: repeat; /* or use 'no-repeat' for full image */
+  background-size: cover;    /* cover fills the screen */
+  background-attachment: fixed; /* makes it static while scrolling */
+  background-position: center;
+}
+
+/* Make sure Angular root covers the full viewport */
+app-root {
+  display: block;
+  min-height: 100vh;
+  backdrop-filter: none;
+}
